@@ -41,7 +41,7 @@ body{
     background: rgba(255, 255, 255, 0.3);
   }
 
-  
+
 
 /*? ESTILIZANDO A PÁGINA */
 .pagina{
@@ -59,7 +59,7 @@ body{
     max-width: 230px;
     background-color: white;
     height: 100vh;
-    margin-left: 0px;
+    margin-left: -230px;
     transition: all 0.3s;
     box-shadow: 0 0 10px rgb(196, 196, 196) ;
 }
@@ -154,4 +154,51 @@ a.titulo-logo{
 .item-sidebar.bottom:hover .material-symbols-outlined.logout{
     color: rgb(18, 77, 18);
     font-size: 25px;
+}
+
+
+
+/*? ESTILIZANDO O NAVBAR */
+ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fff7;
+    width: 100vw;
+    list-style-type: none;
+    border-bottom: 1px solid #f2f2f2;
+    align-items: center;
+}
+
+li{
+    float: left;
+}
+
+li a{
+    display: flex;
+    color: gray;
+    text-align: center;
+    padding: 14px 26px;
+    font-weight: bold;
+}
+
+li a.nav-texts:hover{
+    color: rgb(37, 19, 103);
+}
+
+li a .menu{
+    /* height: 40px;
+    width: 40px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;    
+    padding: 5px;
+    font-size: 30px;
+    color: rgb(93, 219, 93) ;
+}
+
+li a:hover .menu{
+    background-color: rgb(93, 219, 93);
+    color: rgb(37, 19, 103);
 }
