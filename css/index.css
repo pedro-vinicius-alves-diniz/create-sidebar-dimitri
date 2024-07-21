@@ -1,8 +1,157 @@
+/*? IMPORTANDO FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/*? DEFININDO ESTILIZAÇÕES INICIAIS GERAIS  */
 *{
     box-sizing: border-box;
 }
 
+
+
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+
+/*? ESTILIZANDO O SCROLLBAR */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  
+
+/*? ESTILIZANDO A PÁGINA */
+.pagina{
+    display: flex;
+    height: 100vh;
+    align-items: stretch;
+}
+
+
+
+/*? ESTILIZANDO O SIDEBAR E OS SEUS COMPONENTES */
+/*! ESTILIZAÇÃO GERAL DA SIDEBAR */
+.left-sidebar{
+    min-width: 230px;
+    max-width: 230px;
+    background-color: white;
+    height: 100vh;
+    margin-left: 0px;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgb(196, 196, 196) ;
+}
+.activate-sidebar{
+    margin-left: 0px;
+}
+
+
+/*! ESTILIZANDO O TITULO DO SIDEBAR  */
+.titulo-sidebar{
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    border-bottom: 1px solid rgb(25, 150, 25);
+}
+
+a{
+    text-decoration: none;
+}
+a.titulo-nome{
+    margin-left: 3px;
+    font-size: 19px;
+    color: rgb(18, 77, 18);
+    font-weight: bold;
+}
+
+a.titulo-logo{
+    font-size: 40px;
+}
+
+.material-symbols-outlined.school{
+    color: rgb(25, 150, 25);
+    font-size: 30px;
+}
+
+
+/*! ESTILIZANDO O CONTEÚDO DO SIDEBAR */
+.conteudo-sidebar{
+    height: 80vh;
+    /* background: red; */
+    overflow-y: auto;
+}
+
+.item-sidebar{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 16px 20px 16px 22px;
+    border-bottom: 1px solid #e4dbdb;
+    color: grey;
+    font-weight: bold;
+}
+.item-sidebar::after{
+    content: ">";
+}
+.item-sidebar:hover{
+    color: rgb(64, 72, 111);
+    font-size: 18px;
+    background-color: #e4dbdb;
+}
+
+.item-sidebar:nth-last-child(2){
+    margin-bottom: 28px;
+}
+
+/** ESTILIZANDO O BOTÃO DE LOGOUT DO SIDEBAR */
+.item-sidebar.bottom{
+    position: absolute;
+    bottom: 0;
+    width: 230px;
+    border-top: 1px solid rgb(196, 234, 150);
+    border-right: 1px solid rgb(196, 234, 150);
+}
+.item-sidebar.bottom::after{
+    content: none;
+}
+.item-sidebar.bottom:hover{
+    color: rgb(18, 77, 18);
+    font-size: 18px;
+    background-color: rgb(196, 234, 150);
+    border-top: 1px solid rgb(196, 234, 150);
+    border-right: 1px solid rgb(196, 234, 150);
+}
+.material-symbols-outlined.logout{
+    color: gray;
+    
+}
+.item-sidebar.bottom:hover .material-symbols-outlined.logout{
+    color: rgb(18, 77, 18);
+    font-size: 25px;
 }
