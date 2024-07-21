@@ -61,10 +61,10 @@ body{
     height: 100vh;
     margin-left: -230px;
     transition: all 0.3s;
-    box-shadow: 0 0 10px rgb(196, 196, 196) ;
 }
-.activate-sidebar{
+.activate{
     margin-left: 0px;
+    /* box-shadow: 0 0 10px rgb(196, 196, 196) ; */
 }
 
 
@@ -75,9 +75,8 @@ body{
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    padding: 10px;
-    border-bottom: 1px solid rgb(25, 150, 25);
+    background-color: rgb(196, 234, 150);
+    height: 68px;
 }
 
 a{
@@ -86,7 +85,7 @@ a{
 a.titulo-nome{
     margin-left: 3px;
     font-size: 19px;
-    color: rgb(18, 77, 18);
+    color: rgb(37, 19, 103);
     font-weight: bold;
 }
 
@@ -95,7 +94,7 @@ a.titulo-logo{
 }
 
 .material-symbols-outlined.school{
-    color: rgb(25, 150, 25);
+    color: rgb(37, 19, 103);
     font-size: 30px;
 }
 
@@ -126,7 +125,7 @@ a.titulo-logo{
 }
 
 .item-sidebar:nth-last-child(2){
-    margin-bottom: 28px;
+    margin-bottom: 19px;
 }
 
 /** ESTILIZANDO O BOTÃO DE LOGOUT DO SIDEBAR */
@@ -141,18 +140,18 @@ a.titulo-logo{
     content: none;
 }
 .item-sidebar.bottom:hover{
-    color: rgb(18, 77, 18);
+    color: rgb(93, 219, 93);
     font-size: 18px;
-    background-color: rgb(196, 234, 150);
-    border-top: 1px solid rgb(196, 234, 150);
-    border-right: 1px solid rgb(196, 234, 150);
+    background-color: rgb(37, 19, 103);
+    border-top: 1px solid rgb(37, 19, 103);
+    border-right: 1px solid rgb(37, 19, 103);
 }
 .material-symbols-outlined.logout{
     color: gray;
     
 }
 .item-sidebar.bottom:hover .material-symbols-outlined.logout{
-    color: rgb(18, 77, 18);
+    color: rgb(93, 219, 93);
     font-size: 25px;
 }
 
@@ -166,8 +165,9 @@ ul{
     background-color: #f9fff7;
     width: 100vw;
     list-style-type: none;
-    border-bottom: 1px solid #f2f2f2;
+    /* border-bottom: 1px solid rgb(25, 150, 25); */
     align-items: center;
+    height: 68px;
 }
 
 li{
@@ -202,3 +202,28 @@ li a:hover .menu{
     background-color: rgb(93, 219, 93);
     color: rgb(37, 19, 103);
 }
+
+
+
+/*? CONFIGURANDO COMPORTAMENTO NOS DISPOSITIVOS MOBILES */
+@media (max-width:580px){
+    #left-sidebar{
+        position: fixed;
+        top: 0;
+        z-index: 3;
+    }
+
+    .overlay{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+    .overlay.hidden{
+        display: none
+    }
+};
